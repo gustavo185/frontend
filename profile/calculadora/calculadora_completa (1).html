@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculadora.css">
+    <script src="caculadora.js" defer></script>
+    <title>Calculadora</title>
+</head>
+
+<body>
+<main>
+    <div class="container-main">
+        <div id="resultado">
+            <h1>0</h1>
+        </div>
+        <div class="container">
+        <div class="ac">AC</div>
+        <div class="defer"></div>
+        <div class="porcento">%</div>
+        <div class="divide">/</div>
+        </div>
+        <div class="container">
+            <div class="seven">7</div>
+            <div class="eight">8</div>
+            <div class="nine">9</div>
+            <div class="multiply">x</div>
+        </div>
+        <div class="container">
+            <div class="four">4</div>
+            <div class="five">5</div>
+            <div class="six">6</div>
+            <div class="subtract">-</div>
+        </div>
+        <div class="container">
+            <div class="one">1</div>
+            <div class="two">2</div>
+            <div class="tree">3</div>
+            <div class="add">+</div>
+        </div>
+        <div class="container">
+            <div class="zero">0</div>
+            <div class="ponto">.</div>
+            <div class="igual">=</div>
+        </div>
+    </div>
+</main>
+
+</body>
+
+</html>
+
+<style>
+    /* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+#resultado{
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #000;
+    color: #fff;
+    width: 230px;
+    height: 200px;
+
+}
+
+div h1{
+    text-align: end;
+}
+.container{
+    display: flex;
+    background-color: #000;
+    width: 230px;
+    color: #fff;
+    border-radius: 5px;
+
+}
+.ac{
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.porcento{
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.defer{
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.divide{
+    
+    margin-top: 2px;
+    background-color: orange;
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.seven{
+    margin-top: 3px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    margin-left: 10px;
+}
+.eight{
+    margin-top: 3px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.nine{
+    margin-top: 3px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.multiply{
+    margin-top: 2px;
+    background-color: orange;
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.four{
+    margin-top: 3px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.five{
+    margin-top: 3px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.six{
+    margin-top: 3px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.subtract{
+    margin-top: 2px;
+    background-color: orange;
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+
+.one{
+    margin-top: 3px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.two{
+    margin-top: 3px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.tree{
+    margin-top: 3px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.add{
+    margin-top: 2px;
+    background-color: orange;
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.zero{
+    margin-top: 3px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 100px;
+    line-height: 45px;
+    text-align: center;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.ponto{
+    margin-top: 3px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.igual{
+    margin-top: 2px;
+    background-color: orange;
+    color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const display = document.querySelector('#resultado h1');
+    let currentInput = '';
+    let operator = '';
+    let previousInput = '';
+
+    function updateDisplay() {
+        display.textContent = currentInput || '0';
+    }
+
+    function handleNumber(number) {
+        
+        if (currentInput === '' && number === '0') return; 
+        if (currentInput === '0' && number !== '.') {
+            currentInput = number; 
+        } else {
+            currentInput += number;
+        }
+        updateDisplay();
+    }
+
+    function handleOperator(op) {
+        if (currentInput === '' && op !== '-') return; 
+        if (currentInput !== '' || op === '-') {
+            if (operator) {
+                calculate();
+            }
+            previousInput = currentInput;
+            operator = op;
+            currentInput = '';
+        }
+        updateDisplay();
+    }
+
+    function calculate() {
+        const prev = parseFloat(previousInput);
+        const current = parseFloat(currentInput);
+
+        if (isNaN(prev) || isNaN(current)) return;
+
+        let result;
+        switch (operator) {
+            case '+':
+                result = prev + current;
+                break;
+            case '-':
+                result = prev - current;
+                break;
+            case '*':
+                result = prev * current;
+                break;
+            case '/':
+                result = prev / current;
+                break;
+            default:
+                return;
+        }
+
+        currentInput = result.toString();
+        operator = '';
+        previousInput = '';
+        updateDisplay();
+    }
+
+    function handleAC() {
+        currentInput = '';
+        operator = '';
+        previousInput = '';
+        updateDisplay();
+    }
+
+    function handlePercent() {
+        if (currentInput) {
+            currentInput = (parseFloat(currentInput) / 100).toString();
+            updateDisplay();
+        }
+    }
+
+    function handleDecimal() {
+        if (!currentInput.includes('.')) {
+            currentInput += '.';
+            updateDisplay();
+        }
+    }
+
+    function handleEqual() {
+        if (currentInput && operator) {
+            calculate();
+        }
+    }
+
+    document.querySelectorAll('.container div').forEach(button => {
+        button.addEventListener('click', () => {
+            const value = button.textContent;
+
+            switch (value) {
+                case 'AC':
+                    handleAC();
+                    break;
+                case '%':
+                    handlePercent();
+                    break;
+                case '.':
+                    handleDecimal();
+                    break;
+                case '=':
+                    handleEqual();
+                    break;
+                case '+':
+                case '-':
+                case '*':
+                case '/':
+                    handleOperator(value === '*' ? '*' : value);
+                    break;
+                default:
+                    handleNumber(value);
+                    break;
+            }
+        });
+    });
+});
+</script>
+sty
+
